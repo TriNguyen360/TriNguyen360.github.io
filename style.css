@@ -1,0 +1,465 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background:#080808;
+    color: #fff;
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/final_tour.gif);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.container {
+    padding: 10px 10%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 140px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+    background: #CCCCCC;
+}
+
+.header-text {
+    margin-top: 15%;
+    font-size: 30px;
+
+}
+
+.header-text h1 {
+    font-size: 65px;
+    margin-top: 20px;
+    text-align: center; /* This centers the text within the div */
+    width: 100%; /* Ensure it takes up the full width if it's not already set */
+}
+
+.header-text h2 {
+    font-size: 25px;
+    margin-top: 20px;
+    text-align: center; /* This centers the text within the div */
+    width: 100%; /* Ensure it takes up the full width if it's not already set */
+}
+
+.hea
+.header-text h1 span {
+    color: red
+}
+
+/*----------------about---------------*/
+
+#about {
+    padding: 80px 0;
+    min-height: 90vh; /* This ensures that the about section is at least as tall as the viewport */
+    background: linear-gradient(to bottom, #f8f8ff 90%, #ffffff 100%);
+    color: #333333; /* Dark Gray Text */
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1 {
+    flex-basis: 35%;
+}
+
+.about-col-1 img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.about-col-2 {
+    flex-basis: 60%;
+}
+
+.sub-title {
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.about-title {
+    color: #333333; /* A muted teal color for 'About Me' */
+}
+
+.projects-title {
+    color: #2A3439; /* Gunmetal */
+}
+
+.contact-title {
+    color: #f4ede4; /* A soft olive green color for 'Contact Me' */
+}
+
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #5a7d9a;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after {
+    width: 50%;
+}
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+    width: 80%; /* Example percentage, adjust based on your layout */
+    margin: 10px 0;
+    line-height: 1.6; /* This increases the space between lines for better readability */
+}
+
+/* Assuming '.tab-contents ul li span' is the selector for these titles */
+.tab-contents ul li span {
+    color: #333333;
+    font-size: 20px;
+    font-weight: 600; /* Bold font weight */
+
+}
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
+}
+
+/*-------------------------portfoili8 -------------------- */
+
+#portfolio {
+    padding: 50px 0;
+    background-color: #c0d6df; /* Soft blue-grey */
+    color: #ffffff; /* Dark grey text for better readability */
+}
+
+
+.work-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.work {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.layer {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), #007bff); /* Changing #ff004f to a blue color */
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+
+.layer h3 {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.layer a {
+    margin-top: 20px;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.work:hover img{
+    transform: scale(1.1);
+
+}
+
+.work:hover .layer {
+    height: 100%;
+    
+}
+
+.btn {
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    background: #000080; /* Navy blue background */
+    color: #fff; /* White text */
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.5s;
+}
+
+.btn:hover {
+    background: #4169E1; /* Lighter blue for hover */
+}
+
+
+.horizontal-images img {
+    width: 100%;
+    height: 50%; /* This will make each image take half of the height of the container */
+    object-fit: fill; /* This will stretch the image to fit the container */
+    display: block;
+}
+
+.horizontal-images {
+    height: 100%; /* Make sure the parent container takes up the full height */
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+/*-------------------------------contact---------------*/
+
+#contact {
+    background-color: #2A4D69; /* A deep navy blue */
+}
+
+.contact-left {
+    flex-basis: 35%;
+}
+
+.contact-right {
+    flex-basis: 60%;
+}
+
+.contact-left p {
+    margin-top: 30px;
+}
+
+.contact-left p i {
+    color: #f4ede4; /* Soft cream color to match the buttons */
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #f4ede4; /* Changed to a warm gray to match the icons */
+    display: inline-block;
+    transition: transform 0.5s, color 0.3s; /* Added color transition */
+}
+
+.social-icons a:hover {
+    color: #f4ede4; /* Changed to soft cream for hover to match the button color */
+    transform: translateY(-5px);
+}
+
+
+.btn.btn2 {
+    background: #f4ede4; /* Soft cream */
+    border: 1px solid #ddc6b6; /* A border that's slightly darker for definition */
+    color: #333; /* Dark text for readability */
+    display: inline-block;
+
+}
+
+.btn.btn2:hover {
+    background: #e6dfd7; /* A slightly darker shade for hover */
+    border-color: #d4beb0; /* Darkening the border on hover for contrast */
+}
+
+
+
+
+
+
+.contact-right form {
+    width: 100%;
+}
+
+form input, form textarea {
+    width: 100%;
+    border: 0;
+    outline: navajowhite;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+form .btn2 {
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+#msg {
+    color: #61b752;
+    margin-top: -40px;
+    display: block;
+}
+
+/* ----------------------------css for small screen------------------*/
+
+nav .fa-solid.fa-bars, .fa-solid.fa-xmark{
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    #header {
+        background-image: url(Images/phone-background.png);
+    }
+    .header-text {
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1 {
+        font-size: 30px;
+    }
+    nav .fa-solid.fa-bars, .fa-solid.fa-xmark {
+        display: block;
+        font-size: 25px;
+    }
+    nav ul {
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fa-solid.fa-bars, .fa-solid.fa-xmark {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .sub-title {
+        font-size: 40px;
+    }
+    .about-col-1, .about-col-2 {
+        flex-basis: 100%;
+    }
+    .about-col-1 {
+        margin-bottom: 30px;
+    }
+    .about-col-2 {
+        font-size: 14px;
+    }
+    .tab-links {
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contact-left, .contact-right {
+        flex-basis: 100%;
+    }
+    .copyright {
+        font-size: 14px;    
+    }
+}

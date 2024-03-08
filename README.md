@@ -19,11 +19,6 @@ The development of this personal portfolio website was guided by the goal to eff
 ## Running the Project
 To view the portfolio website, visit [https://tringuyen360.github.io/](https://tringuyen360.github.io/). The website is hosted on GitHub Pages, providing an easy and accessible way to explore my projects and skills.
 
-## Future Enhancements
-- Integration with a content management system to easily update and add new projects.
-- Further improvements to the site's responsiveness and accessibility.
-- Adding a blog section to share insights and experiences related to software development.
-
 ## Contact Information
 For any inquiries or suggestions, feel free to reach out via my contact page on the website or at my email ng.tri360@gmail.com
 
